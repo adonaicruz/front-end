@@ -49,9 +49,9 @@ function X(response){
 }
 
 function createProduct(data){
-    var html = '<img src="'+data.imageName+'" alt="">';
-    html += '<p><a href="'+data.detailUrl+'" target="_blank">'+data.name+'</a></p>';
-    html += '<div class="price"><a href="'+data.detailUrl+'" target="_blank">';
+    var html = '<a href="'+data.detailUrl+'" target="_blank"><img src="'+data.imageName+'" alt="">';
+    html += '<p>'+data.name+'</p>';
+    html += '<div class="price">';
     if(data.oldPrice){
         html += '<span class="price_old">de: '+data.oldPrice+'</span>';
     }

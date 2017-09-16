@@ -73,6 +73,19 @@ div.col {
   margin: 20px auto;
   text-align: center;
   width: 150px;
+  padding: 0 20px;
+}
+
+.vitrine > .item .product img {
+  margin-top: 10px;
+}
+
+.vitrine > .item .product:hover {
+  background: #d7eaf9;
+  background: -moz-linear-gradient(top, #d7eaf9 0%, white 100%);
+  background: -webkit-linear-gradient(top, #d7eaf9 0%, white 100%);
+  background: linear-gradient(to bottom, #d7eaf9 0%, white 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7eaf9', endColorstr='#ffffff',GradientType=0 );
 }
 
 .vitrine > .item .product .price, .vitrine > .item .product p {
@@ -178,7 +191,6 @@ div.col {
 
 #carousel .items .product {
   float: left;
-  padding: 0 20px;
 }
 
 @media all and (max-width: 420px) {
