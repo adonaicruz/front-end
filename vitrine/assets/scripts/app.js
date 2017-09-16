@@ -1,17 +1,23 @@
-
+// carosel product width and position (from left) to show and calculate responsive carousel
 var productListWidth = 0;
 var productListPosition = 0;
+
+//JSONP callback 
 function X(response){
-    
+    //product recommendation (just one)
     var recommendations = response.data.recommendation;
+    //list of products (array)
     var referenceData = response.data.reference.item;
+    
     var eReference = document.getElementById("reference");
     var eCarousel = document.querySelector("#carousel .items");
     var carouselNext = document.querySelector(".nav.next");
     var carouselPrev = document.querySelector(".nav.prev");
 
+    //create html for product recommendation
     eReference.innerHTML = createProduct(referenceData);
 
+    //create/add html for all producs and (re)define product list width
     recommendations.forEach(function(data){
         var product = document.createElement("div");
         product.classList.add('product')
@@ -22,7 +28,7 @@ function X(response){
     });
 
     carouselNext.onclick = function() {
-        
+        //if list end, load more products
         if(Math.abs(productListPosition) > productListWidth - document.querySelector("#carousel").clientWidth){
             load();
         }
@@ -55,6 +61,7 @@ function createProduct(data){
     html += '</a></div>';
     return html;
 }
+
 function load(){
     var script = document.createElement('script');
     script.src = 'http://roberval.chaordicsystems.com/challenge/challenge.json?callback=X'; 
