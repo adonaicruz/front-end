@@ -1,0 +1,192 @@
+body {
+  font-family: "Lato", "verdana";
+}
+
+a, a:active {
+  text-decoration: none;
+  color: #000;
+}
+
+div.row::after {
+  clear: both;
+  display: table;
+  content: " ";
+}
+
+div.col {
+  float: left;
+  width: auto;
+  position: relative;
+  min-height: 1px;
+  box-sizing: border-box;
+}
+
+.vitrine {
+  padding-bottom: 42px;
+  border: 1px solid #d6e5f2;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #d5d9dc;
+  display: -webkit-flex;
+  -webkit-flex-flow: row;
+  flex-flow: row;
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #ffffff 2%, #ffffff 90%, #ecf1f7 100%);
+  background: -webkit-linear-gradient(top, #ffffff 2%, #ffffff 90%, #ecf1f7 100%);
+  background: linear-gradient(to bottom, #ffffff 2%, #ffffff 90%, #ecf1f7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ecf1f7',GradientType=0 );
+}
+
+.vitrine .item_reference {
+  min-width: 190px;
+  -webkit-flex: 1 8 20%;
+  flex: 1 8 20%;
+  -webkit-order: 1;
+  order: 1;
+  border-right: 1px solid #eeeeee;
+}
+
+.vitrine .item_carousel {
+  position: relative;
+  overflow: hidden;
+  -webkit-flex: 3 1 80%;
+  flex: 3 1 80%;
+  -webkit-order: 2;
+  order: 2;
+}
+
+.vitrine > .item h2 {
+  margin: 0px;
+  padding: 10px;
+  color: #006699;
+  font-size: 18px;
+  font-weight: 600;
+  background: #eff7fe;
+  background: -moz-linear-gradient(top, #eff7fe 0%, #eff7fe 51%, #e5f1fb 52%, #e5f1fb 100%);
+  background: -webkit-linear-gradient(top, #eff7fe 0%, #eff7fe 51%, #e5f1fb 52%, #e5f1fb 100%);
+  background: linear-gradient(to bottom, #eff7fe 0%, #eff7fe 51%, #e5f1fb 52%, #e5f1fb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eff7fe', endColorstr='#e5f1fb',GradientType=0 );
+}
+
+.vitrine > .item .product {
+  margin: 20px auto;
+  text-align: center;
+  width: 150px;
+}
+
+.vitrine > .item .product .price, .vitrine > .item .product p {
+  text-align: left;
+}
+
+.vitrine > .item .product p {
+  max-height: 59px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-size: 13px;
+}
+
+.vitrine > .item .product .price {
+  color: #cc0000;
+}
+
+.vitrine > .item .product .price a {
+  color: inherit;
+}
+
+.vitrine > .item .product .price small {
+  font-size: 12px;
+}
+
+.vitrine > .item .product .price span {
+  display: block;
+}
+
+.vitrine > .item .product .price .price_old {
+  color: #000;
+  font-size: 13px;
+}
+
+.vitrine > .item .product .price .price_new strong {
+  font-size: 22px;
+}
+
+.vitrine > .item .product .price .price_payment {
+  font-size: 13px;
+}
+
+#carousel {
+  overflow: hidden;
+  padding-left: 40px;
+  position: relative;
+}
+
+#carousel .nav {
+  display: block;
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+#carousel .nav a {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  top: calc(50% - 15px);
+}
+
+#carousel .nav.prev {
+  left: 0px;
+  background: -moz-linear-gradient(right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.02) 1%, rgba(255, 255, 255, 0.9) 55%, white 100%);
+  background: -webkit-linear-gradient(right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.02) 1%, rgba(255, 255, 255, 0.9) 55%, white 100%);
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.02) 1%, rgba(255, 255, 255, 0.9) 55%, white 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+}
+
+#carousel .nav.prev a {
+  left: 20px;
+  border-width: 18px 20px 18px 0;
+  border-color: transparent #0c5395 transparent transparent;
+}
+
+#carousel .nav.next {
+  right: 0;
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.02) 1%, rgba(255, 255, 255, 0.9) 55%, white 100%);
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.02) 1%, rgba(255, 255, 255, 0.9) 55%, white 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.02) 1%, rgba(255, 255, 255, 0.9) 55%, white 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+}
+
+#carousel .nav.next a {
+  border-width: 18px 0 18px 20px;
+  border-color: transparent transparent transparent #0c5395;
+  left: 21px;
+}
+
+#carousel .items {
+  position: relative;
+  width: 2000px;
+  transition: left .4s;
+}
+
+#carousel .items .product {
+  float: left;
+  padding: 0 20px;
+}
+
+@media all and (max-width: 420px) {
+  .vitrine {
+    -webkit-flex-flow: column;
+    flex-flow: column;
+  }
+}
+ 
+
+ /*# sourceMappingURL= style.css.map */
